@@ -10,6 +10,8 @@
   --bgd-color: #2f303a;
   --contact-footer-color: rgba(255, 255, 255, 0.6);
   --button-item-color-bgd: #f5f4fa;
+  --logo-color: #000000;
+  --bgd-button-hero-active: #188ce8;
 }
 
 body {
@@ -29,12 +31,12 @@ ul {
 
 /* Logo */
 .logo {
-  color: #000000;
+  color: var(--logo-color);
 
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.2;
+  line-height: 1.19;
   letter-spacing: 0.03em;
 }
 
@@ -77,54 +79,72 @@ ul {
 }
 
 /* Hero */
-.hero-title {
+.hero {
   background-color: var(--bgd-color);
+}
+.hero-title {
   color: var(--element-color);
 
   font-weight: 900;
   font-size: 44px;
-  line-height: 1.4;
+  line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
-/* Section */
+/* Sections */
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
 .section-team {
-  background-color: var(--button-item-color);
+  background-color: var(--button-item-color-bgd);
 }
 .section-descr.text {
   color: var(--descr-text-color);
 
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.71;
 }
 
 .section-descr.prof {
   color: var(--descr-text-color);
 
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1.19;
 }
 
 .title-index {
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.2;
+  line-height: 1.16;
   text-align: center;
 }
 
-.lists h3 {
+.list-team {
+  background-color: var(--element-color);
+}
+
+.lists-subtitle {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 }
 
-.lists-team h3 {
+.lists-subject {
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.2px;
+  line-height: 1.19;
 }
 
 /* Button hero */
@@ -142,6 +162,15 @@ ul {
   letter-spacing: 0.06em;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
+.button-hero:hover,
+.button-hero:focus {
+  background-color: var(--bgd-button-hero-active);
+}
+
 /* Footer */
 .footer {
   background-color: var(--bgd-color);
@@ -153,7 +182,7 @@ ul {
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.2;
+  line-height: 1.19;
   letter-spacing: 0.03em;
 }
 
@@ -191,7 +220,7 @@ ul {
 
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
 }
@@ -215,6 +244,5 @@ ul {
   color: var(--descr-text-color);
 
   font-size: 16px;
-  line-height: 1.9;
-  letter-spacing: 0.03em;
+  line-height: 1.88;
 }
